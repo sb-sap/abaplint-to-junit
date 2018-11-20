@@ -1,18 +1,18 @@
 {
-  "name": "abaplint-to-junit",
-  "version": "0.1.0",
-  "description": "Convert abaplint reports to junit compatible xml for use with e.g. gitlab ci",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "bin": {
-    "abaplint-to-junit": "./abaplint-to-junit"
-  },
-  "author": "Steffen 'smb' Buehl",
-  "license": "ISC",
-  "dependencies": {
-    "commander": "^2.19.0",
-    "junit-report-builder": "^1.3.1"
-  }
+    "name": "abaplint-to-junit",
+    "version": "0.1.0",
+    "description": "Convert abaplint reports to junit compatible xml for use with e.g. gitlab ci",
+    "main": "index.js",
+    "scripts": {
+        "test": "cat test.txt | node index.js -n Test -f test.xml"
+    },
+    "bin": {
+        "abaplint-to-junit": "./abaplint-to-junit"
+    },
+    "author": "Steffen 'smb' Buehl",
+    "license": "MIT",
+    "dependencies": {
+        "commander": "^2.19.0",
+        "junit-report-builder": "^1.3.1"
+    }
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Test" tests="3" failures="3" errors="3" skipped="0">
+    <testcase classname="src/_test#cl_date_time_utilities.clas.abap" name="70">
+      <failure message="Contains non 7 bit ascii character"/>
+      <error message="ERR: Contains non 7 bit ascii character"/>
+    </testcase>
+    <testcase classname="src/_test#cl_date_time_utilities.clas.abap" name="15">
+      <failure message="Bad method parameter name &quot;cwa_table_line&quot; expected &quot;^C._.*$/i&quot;"/>
+      <error message="ERR: Bad method parameter name &quot;cwa_table_line&quot; expected &quot;^C._.*$/i&quot;"/>
+    </testcase>
+    <testcase classname="src/_test#cl_date_time_utilities.clas.abap" name="22">
+      <failure message="Bad method parameter name &quot;i_field_name&quot; expected &quot;^I._.*$/i&quot;"/>
+      <error message="ERR: Bad method parameter name &quot;i_field_name&quot; expected &quot;^I._.*$/i&quot;"/>
+    </testcase>
+  </testsuite>
+</testsuites>
