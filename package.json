@@ -1,5 +1,5 @@
 {
-  "name": "abaplint-to-xml",
+  "name": "abaplint-to-junit",
   "version": "0.1.0",
   "description": "Convert abaplint reports to junit compatible xml for use with e.g. gitlab ci",
   "main": "index.js",
