@@ -1,13 +1,16 @@
-var str =
-  "src/#test#cl_date_time_utilities.clas.abap[70, 1]          - Contains non 7 bit ascii character\n" +
-  'src/#test#cl_date_time_utilities.clas.abap[15, 7]          - Bad method parameter name "cwa_table_line" expected "^C._.*$/i"\n' +
-  'src/#test#cl_date_time_utilities.clas.abap[22, 9]          - Bad method parameter name "i_field_name" expected "^I._.*$/i"";\n';
-
 var readline = require("readline");
 var Error = require("./error.js");
 var builder = require("junit-report-builder");
 
 //var array = str.split("\n");
+
+//process.argv.forEach((val, index, array) => {
+//});
+if (process.argc < 3) {
+  exit(-1);
+}
+
+var name = process.argv[2];
 
 var rl = readline.createInterface({
   input: process.stdin,
@@ -15,7 +18,7 @@ var rl = readline.createInterface({
   terminal: false
 });
 
-var suite = builder.testSuite().name("My suite");
+var suite = builder.testSuite().name(name);
 
 //array.forEach(line => {
 rl.on("line", line => {
@@ -25,8 +28,8 @@ rl.on("line", line => {
       .testCase()
       .className(obj.file)
       .name(obj.line)
-      .error({ "line": obj.line, "row": obj.row })
-      .failure(obj.error)      
+      .error(obj.error)
+      .failure(obj.toString());
   }
 });
 
