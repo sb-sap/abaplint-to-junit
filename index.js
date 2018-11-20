@@ -6,11 +6,12 @@ var builder = require("junit-report-builder");
 
 //process.argv.forEach((val, index, array) => {
 //});
-if (process.argc < 3) {
-  exit(-1);
+var name = "ABAPLint"
+if (process.argc == 3) {
+    name = process.argv[2];
 }
 
-var name = process.argv[2];
+
 
 var rl = readline.createInterface({
   input: process.stdin,
