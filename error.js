@@ -33,6 +33,10 @@ class Error {
       return this.valid;
   }
 
+  getClassname() {
+      return this.file.replace('#', '_');
+  }
+
   toString() {
     return "file: %s\nline: %s\nrow: %s\nerror: %s".format(
       this.file,
