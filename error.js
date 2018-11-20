@@ -38,7 +38,7 @@ class Error {
     }
 
     getName() {
-        return "Line: %s / Pos: %s".format(this.line, this.position);
+        return "%s [Line: %s / Position: %s]: %s".format(this.getClassname(), this.line, this.position, this.error);
     }
 
     toString() {

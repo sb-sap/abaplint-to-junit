@@ -26,7 +26,6 @@ rl.on("line", line => {
             .testCase()
             .className(obj.getClassname())
             .name(obj.getName())
-            .error("ERR: " + obj.error)
             .failure(line);
 
         failure = true;
