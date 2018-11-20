@@ -25,7 +25,8 @@ rl.on("line", line => {
         var testCase = suite
             .testCase()
             .className(obj.getClassname())
-            .name(obj.getName())
+            .name(obj.error)
+            .error(obj.getName())
             .failure(line);
 
         failure = true;

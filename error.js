@@ -34,7 +34,7 @@ class Error {
     }
 
     getClassname() {
-        return this.file.replace('#', '_');
+        return this.file.replace('src/', '').replace(new RegExp('#', 'g'), '/');
     }
 
     getName() {
