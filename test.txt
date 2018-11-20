@@ -1,0 +1,4 @@
+  src/#test#cl_date_time_utilities.clas.abap[70, 1]          - Contains non 7 bit ascii character
+  src/#test#cl_date_time_utilities.clas.abap[15, 7]          - Bad method parameter name "cwa_table_line" expected "^C._.*$/i"
+  src/#test#cl_date_time_utilities.clas.abap[22, 9]          - Bad method parameter name "i_field_name" expected "^I._.*$/i"
+  
