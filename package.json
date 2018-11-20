@@ -1,5 +1,5 @@
 {
-  "name": "abaplint-to-junit",
+  "name": "abaplint-to-xml",
   "version": "0.1.0",
   "description": "Convert abaplint reports to junit compatible xml for use with e.g. gitlab ci",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "abaplint-to-xml": "./abaplint-to-xml"
+    "abaplint-to-junit": "./abaplint-to-junit"
   },  
   "author": "Steffen 'smb' Buehl",
   "license": "ISC",
