@@ -1,15 +1,13 @@
 var readline = require("readline");
 var Error = require("./error.js");
 var builder = require("junit-report-builder");
+var program = require("commander");
 
-//var array = str.split("\n");
-
-//process.argv.forEach((val, index, array) => {
-//});
-var name = "ABAPLint";
-if (process.argc == 3) {
-  name = process.argv[2];
-}
+program
+  .version("0.1.0")
+  .option("-n, --name [name]", "Set name for testsuide", "ABAPLint")
+  .option("-f, --file [file]", "Set report filename", "report.xml")
+  .parse(process.argv);
 
 var rl = readline.createInterface({
   input: process.stdin,
@@ -17,7 +15,7 @@ var rl = readline.createInterface({
   terminal: false
 });
 
-var suite = builder.testSuite().name(name);
+var suite = builder.testSuite().name(program.name);
 
 var failure = false;
 //array.forEach(line => {
@@ -32,11 +30,12 @@ rl.on("line", line => {
       .failure(obj.error);
 
     failure = true;
+    console.log(line);
   }
 });
 
 rl.on("close", () => {
-  console.log(builder.build());
+  builder.writeTo(program.file);
 });
 
 if (failure) {
